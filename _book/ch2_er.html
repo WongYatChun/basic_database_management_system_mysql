@@ -1,0 +1,493 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Ch2: ER Modeling · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ch3_relational_tables.html" />
+    
+    
+    <link rel="prev" href="ch1_intro.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Preface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch1_intro.html">
+            
+                <a href="ch1_intro.html">
+            
+                    
+                    Ch1: Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="ch2_er.html">
+            
+                <a href="ch2_er.html">
+            
+                    
+                    Ch2: ER Modeling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ch3_relational_tables.html">
+            
+                <a href="ch3_relational_tables.html">
+            
+                    
+                    Ch3: ERD to Relational Tables and Foreign Key
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ch4_sql.html">
+            
+                <a href="ch4_sql.html">
+            
+                    
+                    Ch4: SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="ch5_relational_algebra.html">
+            
+                <a href="ch5_relational_algebra.html">
+            
+                    
+                    Ch5: Relational Algebra
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="ch6_db_design.html">
+            
+                <a href="ch6_db_design.html">
+            
+                    
+                    Ch6: Database Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="ch7_db_storage.html">
+            
+                <a href="ch7_db_storage.html">
+            
+                    
+                    Ch7: Database Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="ch8_db_indexing.html">
+            
+                <a href="ch8_db_indexing.html">
+            
+                    
+                    Ch8: Database Indexing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="ch9_collaborative_filtering.html">
+            
+                <a href="ch9_collaborative_filtering.html">
+            
+                    
+                    Ch9: Collaborative Filtering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="ch10_nonrelational_db.html">
+            
+                <a href="ch10_nonrelational_db.html">
+            
+                    
+                    Ch10: Non-relational Database
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Ch2: ER Modeling</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="chapter-2-entity-relationship-model">Chapter 2 Entity-Relationship Model</h1>
+<h2 id="e-r-diagram-basics">E-R Diagram Basics</h2>
+<hr>
+<h3 id="1-entity-and-entity-set">1. Entity and Entity Set</h3>
+<p><strong>Entity</strong>: An object</p>
+<ul>
+<li>have attributes</li>
+</ul>
+<p><strong>Entity set</strong>: A set of entities of the same type that share the same attributes.</p>
+<p><strong>E-R Diagram:</strong></p>
+<ul>
+<li>Rectangle: entity set</li>
+<li>Ellipse: attribute</li>
+<li>Line between Rectangle and Ellipse: link between an entity and the an attribute</li>
+</ul>
+<h3 id="2-relationship-and-relationship-set">2. Relationship and Relationship Set</h3>
+<p><strong>Relationship</strong>: an association among entities</p>
+<p><strong>Relationship Set</strong>: a set of relationships of the same type</p>
+<p><strong>E-R Diagram:</strong></p>
+<ul>
+<li>Diamonds: Relationship sets</li>
+</ul>
+<h3 id="3-constraints">3. Constraints</h3>
+<p><strong>Mapping cardinalities</strong></p>
+<ul>
+<li>how many entities can be associated with another entities via a relationship set? <em>One or More than One?</em></li>
+<li><em>E-R Diagram:</em><ul>
+<li>One: Directed line <script type="math/tex; ">\rightarrow</script></li>
+<li>More than one: Undirected line <script type="math/tex; ">-</script></li>
+</ul>
+</li>
+</ul>
+<p><strong>Participation constrainst</strong></p>
+<ul>
+<li>how many entities in the entity set have to participate in the relationship set<ul>
+<li><strong>Total Participation</strong>: Every entity in the entity set participates in at least one relationship in the relationship set</li>
+<li><strong>Partial Participation</strong>: Some entity may not participate in any relationship in the relationship set</li>
+</ul>
+</li>
+<li><em>E-R Diagram:</em><ul>
+<li>Total Participation: Double line <script type="math/tex; ">=</script></li>
+<li>Partial Participation: Single line <script type="math/tex; ">-</script></li>
+</ul>
+</li>
+</ul>
+<h3 id="4-keys-of-an-entity-set">4. Keys of an entity set</h3>
+<p><strong>Super Key</strong></p>
+<ul>
+<li>A set of attributes whose values uniquely determine each entity</li>
+</ul>
+<p><strong>Candidate Key</strong></p>
+<ul>
+<li>A minimal supper key such that no subset of a candidate key is still a super key</li>
+</ul>
+<p><strong>Primary Key</strong></p>
+<ul>
+<li>The selected candidate key</li>
+<li><em>E-R Diagram:</em><ul>
+<li>Primary key is <em>underlined</em>: <u>attribute</u></li>
+</ul>
+</li>
+</ul>
+<h3 id="5-attributes-types">5. Attributes types</h3>
+<p><strong>Single-valued v.s. Multi-valued attributes</strong></p>
+<ul>
+<li>Multi-valued attribute: accept more than one value<ul>
+<li><em>E-R Diagram</em>: double ellipses</li>
+</ul>
+</li>
+</ul>
+<p><strong>Derived attribute</strong></p>
+<ul>
+<li>Values can be derived from other
+attributes<ul>
+<li><em>E-R Diagram</em>: dashed ellipses</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-weak-entity-set">6. Weak Entity Set</h3>
+<p><strong>Weak entity set</strong>: an entity set <u>without a primary key</u></p>
+<p><strong>Identifying entity set</strong>: a weak entity set must relate to its identifying entity set via a <strong>total, many-to-one</strong> <em>identifying relationship set <u>from</u> the former <u>to</u> the latter</em></p>
+<p><strong>Discriminator</strong> (or partial key): a set of attributes that distinguish among the weak
+entities that depend on the same identifying entity.</p>
+<h3 id="7-role">7. Role</h3>
+<ul>
+<li>Specify how a subset of entities interact with another subset of entities<ul>
+<li>Entity sets of a relationship need not be distinct</li>
+</ul>
+</li>
+</ul>
+<h3 id="8-specialization-and-generalization">8. Specialization and Generalization</h3>
+<p><strong>Specialization</strong></p>
+<ul>
+<li>designate sub-groupings within an entity set that are
+distinctive from other entities in the set</li>
+<li>A lower-level entity set inherits all
+attributes and relationship set
+participation of the higher-level
+entity set to which it is linked</li>
+<li>Lower-level entity set can have its
+own attributes</li>
+</ul>
+<p><strong>Total or Partial</strong></p>
+<ul>
+<li>Specifies whether an entity in the higher level-entity set
+must belong to at least one of the lower-level entity sets
+within a specialization.</li>
+</ul>
+<p><strong>Disjoint or overlapping</strong></p>
+<ul>
+<li>Constraints on whether entities may belong to more than
+one lower-level entity set within a single specialization.<ul>
+<li>Disjoint: must be either A or B</li>
+<li>Overlapping: Can be both</li>
+</ul>
+</li>
+<li><em>E-R Diagram</em><ul>
+<li>A disjoint specialization: &quot;Disjoint&quot; beside the &quot;IS A&quot;</li>
+<li>An overlapping specialization: Null, default</li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ch1_intro.html" class="navigation navigation-prev " aria-label="Previous page: Ch1: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ch3_relational_tables.html" class="navigation navigation-next " aria-label="Next page: Ch3: ERD to Relational Tables and Foreign Key">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Ch2: ER Modeling","level":"1.3","depth":1,"next":{"title":"Ch3: ERD to Relational Tables and Foreign Key","level":"1.4","depth":1,"path":"ch3_relational_tables.md","ref":"ch3_relational_tables.md","articles":[]},"previous":{"title":"Ch1: Introduction","level":"1.2","depth":1,"path":"ch1_intro.md","ref":"ch1_intro.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","livereload"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch2_er.md","mtime":"2019-01-20T15:57:18.163Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-20T15:55:16.940Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
